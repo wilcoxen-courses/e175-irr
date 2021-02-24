@@ -6,11 +6,11 @@ This exercise examines the returns from constructing a new power plant when a ca
 
 ### Input Data
 
-There are four input files and each gives the cash flows associated with building a particular type of power plant under a particular assumption about a carbon tax. Each file is in comma separated variable (CSV) format with a construction cost in year 0 and then profits in years 1-40. File **std_notax.csv** shows the cash flows for a standard natural gas power plant when no carbon tax is imposed. File **std_tax.csv** shows the same power plant when a carbon tax is imposed beginning in year 6. Years 0-5 are identical to the first file but profits in years 6-40 are lower due to the tax. File **std_ev.csv** is the same plant but years 6-40 show the expected profit assuming the firm believes there is a 50% chance of the tax being imposed. Finally, file **ccs.csv** shows the cost and profit associated with building an advanced gas plant with carbon capture and sequestration (CCS) technology. CCS eliminates carbon emissions so the plant's profits are the same whether or not there is a carbon tax, and hence there is only one file.
+There are four input files and each gives the cash flows associated with building a particular type of power plant under a particular assumption about a carbon tax. Each file is in comma separated variable (CSV) format with a construction cost in year 0 and then profits in years 1-40. File **std_notax.csv** shows the cash flows for a standard natural gas power plant when no carbon tax is imposed. File **std_tax.csv** shows the same power plant when a carbon tax is imposed beginning in year 6: years 0-5 are identical to the first file but profits in years 6-40 are lower due to the tax. File **std_ev.csv** is the same plant but years 6-40 show the expected profit assuming the firm believes there is a 50% chance of the tax being imposed. Finally, file **ccs.csv** shows the cost and profit associated with building an advanced gas plant with carbon capture and sequestration (CCS) technology. CCS eliminates carbon emissions so the plant's profits are the same whether or not there is a carbon tax, and hence there is only one file.
 
 ### Deliverables
 
-Please submit two scripts, `npvtools.py` and `analyze.py`, and an updated copy of Markdown file `results.md`. Each is described below.
+Please submit two scripts, `npvtools.py` and `analyze.py`, and an updated copy of the Markdown file `results.md`. Each is described below.
 
 ### Instructions
 
@@ -51,7 +51,7 @@ Please submit two scripts, `npvtools.py` and `analyze.py`, and an updated copy o
 
         1. Return `npv` from the function.
 
-    1. In the main body of the script, after the function has been declared, create a list called `files` consisting of four strings with the names of the input files. 
+    1. In the main body of the script, after the end of the function, create a list called `files` consisting of four strings with the names of the input files. 
 
     1. Add a `for` loop with running variable `filename` that loops over `files`. The body of the loop should consist of a single line that calls `analyze()` on `filename`. You can ignore the value returned by `analyze()` since for the current assignment the printed information is all that's needed.
 
