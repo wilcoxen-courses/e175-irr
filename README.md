@@ -1,20 +1,20 @@
 # Exercise: IRRs for Power Plant Options
 
-### Summary
+## Summary
 
-This exercise examines the returns from constructing a new power plant when a carbon tax may be imposed in the future. It builds on the NPV functions from the previous assignment and also adds an internal rate of return (IRR) calculation. In addition, it shows how modules are constructed in Python. 
+This exercise examines the returns from constructing a new power plant when a carbon tax may be imposed in the future. It builds on the NPV functions from the previous assignment and also adds an internal rate of return (IRR) calculation. In addition, it shows how modules are constructed in Python.
 
-### Input Data
+## Input Data
 
-There are four input files and each gives the cash flows associated with building a particular type of power plant under a particular assumption about a carbon tax. Each file is in comma separated variable (CSV) format with a construction cost in year 0 and then profits in years 1-40. File **std_notax.csv** shows the cash flows for a standard natural gas power plant when no carbon tax is imposed. File **std_tax.csv** shows the same power plant when a carbon tax is imposed beginning in year 6: years 0-5 are identical to the first file but profits in years 6-40 are lower due to the tax. File **std_ev.csv** is the same plant but years 6-40 show the expected profit assuming the firm believes there is a 50% chance of the tax being imposed. Finally, file **ccs.csv** shows the cost and profit associated with building an advanced gas plant with carbon capture and sequestration (CCS) technology. CCS eliminates carbon emissions so the plant's profits are the same whether or not there is a carbon tax, and hence there is only one file.
+There are four input files, and each gives the cash flows associated with building a particular type of power plant under a particular assumption about a carbon tax. Each file is in comma separated variable (CSV) format with a construction cost in year 0 and then profits in years 1-40. File **std_notax.csv** shows the cash flows for a standard natural gas power plant when no carbon tax is imposed. File **std_tax.csv** shows the same power plant when a carbon tax is imposed beginning in year 6: years 0-5 are identical to the first file but profits in years 6-40 are lower due to the tax. File **std_ev.csv** is the same plant but years 6-40 show the expected profit assuming the firm believes there is a 50% chance of the tax being imposed. Finally, file **ccs.csv** shows the cost and profit associated with building an advanced gas plant with carbon capture and sequestration (CCS) technology. CCS eliminates carbon emissions so the plant's profits are the same whether or not there is a carbon tax, and hence there is only one file.
 
-### Deliverables
+## Deliverables
 
-Please submit two scripts, `npvtools.py` and `analyze.py`, and an updated copy of the Markdown file `results.md`. Each is described below.
+Please submit two scripts, **npvtools.py** and **analyze.py**, and an updated copy of the Markdown file **results.md**. Each is described below.
 
-### Instructions
+## Instructions
 
-**A. Script npvtools.py**
+### A. Script npvtools.py
 
 1. This script will be a modified version of `npv.py` from the previous assignment. Please do the following to create it:
 
@@ -23,12 +23,12 @@ Please submit two scripts, `npvtools.py` and `analyze.py`, and an updated copy o
     1. Trim the script so that it just contains the two functions, `read_cashflow()` and `npv()`, and any appropriate comments. Take out the part of the script that actually used the functions.
 
     1. Go to the definition of `read_cashflow()` and add a second, optional, argument called `splitter` that has a default value of `None`. `None` is a special keyword in Python that indicates a variable has no value.
-    
+
     1. Modify the call to `split()` later in the function to read `split(splitter)`. The function will now split on whatever character string is given as the `splitter` argument in the call. However, if `splitter` isn't given, it will use `split(None)`, which is exactly the same as `split()`.
-    
+
     1. The result will be a Python module that can be used in other scripts via an `import` statement.
 
-**B. Script analyze.py**
+### B. Script analyze.py
 
 1. Now create a new script called `analyze.py` as follows:
 
@@ -51,22 +51,22 @@ Please submit two scripts, `npvtools.py` and `analyze.py`, and an updated copy o
 
         1. Return `npv` from the function.
 
-    1. In the main body of the script, after the end of the function, create a list called `files` consisting of four strings with the names of the input files. 
+    1. In the main body of the script, after the end of the function definition, create a list called `files` consisting of four strings with the names of the input files.
 
-    1. Add a `for` loop with running variable `filename` that loops over `files`. The body of the loop should consist of a single line that calls `analyze()` on `filename`. You can ignore the value returned by `analyze()` since for the current assignment the printed information is all that's needed.
+    1. Add a `for` loop that loops over `files` using `filename` as the loop variable. The body of the loop should consist of a single line that calls `analyze()` on `filename`. You can ignore the value returned by `analyze()` since for the current assignment the printed information is all that's needed.
 
-**C. Markdown file results.md**
+### C. Markdown file results.md
 
 1. Edit the Markdown file `results.md` and replace the `?TBD?`
     placeholders appropriate answers.
-    
-### Submitting
+
+## Submitting
 
 Once you're happy with everything and have committed all of the changes to
 your local repository, please push the changes to GitHub. At that point,
 you're done: you have submitted your answer.
 
-### Tips
+## Tips
 
 + Modules are an excellent way to reuse code and are the basis for a lot
 of Python's more advanced capabilities.
