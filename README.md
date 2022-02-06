@@ -62,16 +62,10 @@ Please submit two scripts, **npvtools.py** and **analyze.py**, and an updated co
 
 ## Submitting
 
-Once you're happy with everything and have committed all of the changes to
-your local repository, please push the changes to GitHub. At that point,
-you're done: you have submitted your answer.
+Once you're happy with everything and have committed all of the changes to your local repository, please push the changes to GitHub. At that point, you're done: you have submitted your answer.
 
 ## Tips
 
-+ Modules are an excellent way to reuse code and are the basis for a lot
-of Python's more advanced capabilities.
++ Modules are an excellent way to reuse code and are the basis for a lot of Python's more advanced capabilities.
 
-+ Whenever you use an iterative numerical procedure like Newton's method,
-always include a maximum iteration count. Otherwise, if something is
-wrong with your function and it has no solution, the algorithm could
-iterate for a long time.
++ Whenever you use an iterative numerical procedure like Newton's method, always include a maximum iteration count. Otherwise, if something is wrong with your function and it has no solution, the algorithm could iterate for a long time.
