@@ -2,7 +2,7 @@
 
 ## Summary
 
-This exercise examines the returns from constructing a new power plant when a carbon tax may be imposed in the future. It builds on the NPV functions from the previous assignment and also adds an internal rate of return (IRR) calculation. In addition, it shows how modules are constructed in Python.
+This exercise examines the returns to an electric power producer for constructing a new power plant when a carbon tax may be imposed in the future. It builds on the NPV functions from the previous assignment and also adds an internal rate of return (IRR) calculation. In addition, it shows how modules are constructed in Python.
 
 ## Input Data
 
