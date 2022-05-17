@@ -34,7 +34,7 @@ makefile
 *.zip
 *.csv
 
-! ccs.csv
-! std_ev.csv
-! std_notax.csv
-! std_tax.csv
+!ccs.csv
+!std_ev.csv
+!std_notax.csv
+!std_tax.csv
