@@ -46,8 +46,7 @@ Please submit two scripts, **npvtools.py** and **analyze.py**, and an updated co
 
         1. Multiply `irr` by 100 to convert it to a percentage.
 
-        1. Print the name of the file, the NPV rounded to 1 digit after the
-        decimal point, and the IRR, also rounded to 1 digit.
+        1. Print the name of the file, the NPV rounded to 1 digit after the decimal point, and the IRR, also rounded to 1 digit.
 
         1. Return `npv` from the function.
 
@@ -57,8 +56,7 @@ Please submit two scripts, **npvtools.py** and **analyze.py**, and an updated co
 
 ### C. Markdown file results.md
 
-1. Edit the Markdown file `results.md` and replace the `?TBD?`
-    placeholders appropriate answers.
+1. Edit the Markdown file `results.md` and replace the `TBD` placeholders appropriate answers. Please note that this assignment focuses on the plants from the perspective of their owners or investors: you don't need to discuss externalities or social costs.
 
 ## Submitting
 
