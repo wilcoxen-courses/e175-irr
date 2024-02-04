@@ -24,7 +24,11 @@ Please submit two scripts, **npvtools.py** and **analyze.py**, and an updated co
 
     1. Go to the definition of `read_cashflow()` and add a second, optional, argument called `splitter` that has a default value of `None`. `None` is a special keyword in Python that indicates a variable has no value.
 
+    1. Now add type hints to the arguments. The hints for both `filename` and `splitter` should be `str`. For optional arguments, the type hint goes just after the argument name and before the equals sign. Finally, add a type hint for the return value to indicate that it's a `list`.
+
     1. Modify the call to `split()` later in the function to read `split(splitter)`. The function will now split on whatever character string is given as the `splitter` argument in the call. However, if `splitter` isn't given, it will use `split(None)`, which is exactly the same as `split()`.
+
+    1. Add type hints to the `npv` function as well. The hint for `r` should be `float`, the hint for `cashflow` should be `list`, and the hint for the return value should be `float`.
 
     1. The result will be a Python module that can be used in other scripts via an `import` statement.
 
@@ -36,7 +40,7 @@ Please submit two scripts, **npvtools.py** and **analyze.py**, and an updated co
 
     1. Include the line `import scipy.optimize as opt`.
 
-    1. Define a new function called `analyze` that accepts one input     parameter, `filename`. The function should do the following:
+    1. Define a new function called `analyze` that accepts one input parameter, `filename` and use `str` as the type hint. Set the type hint for the function's return value to `None`. Then create a function that does the following:
 
         1. Call `nt.read_cashflow()` to read the cash flow in `filename` into a variable called `cashflow`. It should use the new argument `splitter=","` to indicate that the file should be split on commas rather than spaces since these are CSV files.
 
@@ -47,8 +51,6 @@ Please submit two scripts, **npvtools.py** and **analyze.py**, and an updated co
         1. Multiply `irr` by 100 to convert it to a percentage.
 
         1. Print the name of the file, the NPV rounded to 1 digit after the decimal point, and the IRR, also rounded to 1 digit.
-
-        1. Return `npv` from the function.
 
     1. In the main body of the script, after the end of the function definition, create a list called `files` consisting of four strings with the names of the input files.
 

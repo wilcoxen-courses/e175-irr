@@ -2,7 +2,7 @@
 demo.py
 Spring 2020 PJW
 
-Demonstrate calling functions with optional parameters, and demonstrate the 
+Demonstrate calling functions with optional parameters, and demonstrate the
 use of Newton's Method to solve an equation.
 """
 
@@ -10,9 +10,15 @@ import scipy.optimize as opt
 
 #%% Calling functions
 
-#  Sample function with two required arguments and one optional one
+#  Sample function with two required arguments and one optional one.
+#
+#  Note the optional type hints. These are not required, but they
+#  provide a way to document the function and to provide a check
+#  on the input. The return type hint is also optional, but it's
+#  a good idea to use it. The None indicates that this function
+#  doesn't return anything.
 
-def sample_function(payment,year,r=0.05):
+def sample_function(payment:float, year:int, r:float = 0.05) -> None:
     pv = round( payment/(1+r)**year , 2 )
     print( f"PV of {payment} with T={year} and r={r} is ${pv}" )
 
@@ -23,7 +29,7 @@ sample_function( 100, 10, 0.03 )
 sample_function( 100, 10, r=0.07 )
 
 #%% Using Newton
-    
+
 #  Compute the difference between x cubed and y. We'll use this
 #  later to input a value of y and have the algorithm loop over
 #  guesses of x until it finds one where x**3 is equal to y.
@@ -32,7 +38,7 @@ sample_function( 100, 10, r=0.07 )
 #  it's an illustration of how the algorithm works for a case where
 #  you know what the answer should be.
 
-def find_cube_root(x,y):
+def find_cube_root(x:float ,y:int) -> float:
     miss = x**3 - y
     return miss
 
