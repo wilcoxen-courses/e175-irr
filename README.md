@@ -54,7 +54,7 @@ Please submit two scripts, **npvtools.py** and **analyze.py**, and an updated co
 
     1. In the main body of the script, after the end of the function definition, create a list called `files` consisting of four strings with the names of the input files.
 
-    1. Add a `for` loop that loops over `files` using `filename` as the loop variable. The body of the loop should consist of a single line that calls `analyze()` on `filename`. You can ignore the value returned by `analyze()` since for the current assignment the printed information is all that's needed.
+    1. Add a `for` loop that loops over `files` using `filename` as the loop variable. The body of the loop should consist of a single line that calls `analyze()` on `filename`.
 
 ### C. Markdown file results.md
 
