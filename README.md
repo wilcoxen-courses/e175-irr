@@ -24,11 +24,9 @@ Please submit two scripts, **npvtools.py** and **analyze.py**, and an updated co
 
     1. Go to the definition of `read_cashflow()` and add a second, optional, argument called `splitter` that has a default value of `None`. `None` is a special keyword in Python that indicates a variable has no value.
 
-    1. Now add type hints to the arguments. The hints for both `filename` and `splitter` should be `str`. For optional arguments, the type hint goes just after the argument name and before the equals sign. Finally, add a type hint for the return value to indicate that it's a `list`.
+    1. Now add a type hint for the optional argument `splitter` indicating that it should be a string. For optional arguments, the type hint goes just after the argument name and before the equals sign.
 
     1. Modify the call to `split()` later in the function to read `split(splitter)`. The function will now split on whatever character string is given as the `splitter` argument in the call. However, if `splitter` isn't given, it will use `split(None)`, which is exactly the same as `split()`.
-
-    1. Add type hints to the `npv` function as well. The hint for `r` should be `float`, the hint for `cashflow` should be `list`, and the hint for the return value should be `float`.
 
     1. The result will be a Python module that can be used in other scripts via an `import` statement.
 
